@@ -1,29 +1,40 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
-  background-color: #e66767;
-  padding: 16px;
+  background-color: #E66767;
+  padding: 8px;
   color: #fff;
 `
 
 export const Image = styled.img`
   width: 100%;
-  height: 140px;
+  height: 167px;
   object-fit: cover;
+  display: block;
+`
+
+export const Content = styled.div`
+  padding: 8px;
 `
 
 export const Title = styled.h3`
-  margin: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
 `
 
 export const Description = styled.p`
   font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
 `
 
 export const Button = styled.button`
-  margin-top: 12px;
-  background-color: #fff;
-  color: #e66767;
+  width: 100%;
+  background-color: #FFEBD9;
+  color: #E66767;
   border: none;
-  padding: 8px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: bold;
 `

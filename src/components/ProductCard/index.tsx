@@ -1,4 +1,4 @@
-import { Card, Image, Title, Description, Button } from './styles'
+import { Card, Image, Content, Title, Description, Button } from './styles'
 import { useState } from 'react'
 import ProductModal from '../ProductModal'
 
@@ -16,12 +16,15 @@ export default function ProductCard(props: Props) {
     <>
       <Card>
         <Image src={props.image} />
-        <Title>{props.name}</Title>
-        <Description>{props.description}</Description>
 
-        <Button onClick={() => setIsOpen(true)}>
-          Mais detalhes
-        </Button>
+        <Content>
+          <Title>{props.name}</Title>
+          <Description>{props.description}</Description>
+
+          <Button onClick={() => setIsOpen(true)}>
+            Mais detalhes
+          </Button>
+        </Content>
       </Card>
 
       {isOpen && (

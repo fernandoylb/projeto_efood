@@ -1,6 +1,7 @@
 import Header from '../../components/Header'
 import ProductCard from '../../components/ProductCard'
-import { Wrapper, Banner, Container, Grid, Title, Category } from './styles'
+import Footer from '../../components/Footer'
+import { Wrapper, Banner, Overlay, BannerContent, Container, Grid, Title, Category } from './styles'
 
 const products = [
   {
@@ -14,21 +15,32 @@ const products = [
   {
     id: 2,
     name: 'Pizza de Pepperoni',
-    description: 'Deliciosa pizza de Pepperoni tradicional.',
+    description: 'Deliciosa pizza de Pepperoni tradicional, com mussarela derretida e um delicioso pepperoni.',
     image: '/pizza-pepperoni.jpg',
-    price: 60.9
+    price: 64.9
+  },
+  {
+    id: 3,
+    name: 'Pizza de Calabresa',
+    description: 'Saborosa pizza de Calabresa, com mussarela derretida e fatias de calabresa apimentada.',
+    image: '/pizza-calabresa.jpg',
+    price: 55.9
   }
 ]
 
 export default function Restaurant() {
   return (
     <Wrapper>
-      <Header />
+      <Header variant="restaurant" />
 
-      <Banner>
+    <Banner>
+      <Overlay />
+
+      <BannerContent>
         <Category>Italiana</Category>
         <Title>La Dolce Vita Trattoria</Title>
-      </Banner>
+      </BannerContent>
+    </Banner>
 
       <Container>
         <Grid>
@@ -37,6 +49,7 @@ export default function Restaurant() {
           ))}
         </Grid>
       </Container>
+      <Footer />
     </Wrapper>
   )
 }

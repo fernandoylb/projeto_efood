@@ -1,11 +1,34 @@
-import { Container, Logo, Nav } from './styles'
+import { Container, Content, Logo, Nav, Title } from './styles'
+import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
-export default function Header() {
+type Props = {
+  variant?: 'home' | 'restaurant'
+}
+
+export default function Header({ variant = 'home' }: Props) {
+  if (variant === 'home') {
+    return (
+      <Container variant="home">
+        <Logo src={logo} />
+        <Title>
+          Viva experiências gastronômicas no conforto da sua casa
+        </Title>
+      </Container>
+    )
+  }
+
   return (
-    <Container>
-      <Nav>Restaurantes</Nav>
-      <Logo>efood</Logo>
-      <Nav>0 produto(s) no carrinho</Nav>
+    <Container variant="restaurant">
+      <Content>
+        <Nav>
+          <Link to="/">Restaurantes</Link>
+        </Nav>
+
+        <Logo src={logo} />
+
+        <Nav>0 produto(s) no carrinho</Nav>
+      </Content>
     </Container>
   )
 }

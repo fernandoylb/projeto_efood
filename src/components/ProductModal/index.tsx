@@ -1,11 +1,4 @@
-import {
-  Overlay,
-  ModalContainer,
-  Image,
-  Content,
-  Close,
-  Button
-} from './styles'
+import { Overlay, ModalContainer, Image, Content, Close, Button } from './styles'
 
 type Props = {
   name: string
